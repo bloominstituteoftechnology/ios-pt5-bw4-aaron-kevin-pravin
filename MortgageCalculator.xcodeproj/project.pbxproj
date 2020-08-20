@@ -13,6 +13,10 @@
 		11E4C42824ECBC0B005171B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42624ECBC0B005171B4 /* Main.storyboard */; };
 		11E4C42A24ECBC14005171B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42924ECBC14005171B4 /* Assets.xcassets */; };
 		11E4C42D24ECBC14005171B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42B24ECBC14005171B4 /* LaunchScreen.storyboard */; };
+		11E4C44124ECC545005171B4 /* Mortgage.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C44024ECC545005171B4 /* Mortgage.m */; };
+		11E4C44424ECC55E005171B4 /* DebtIncomeRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C44324ECC55E005171B4 /* DebtIncomeRatio.m */; };
+		11E4C44724ECC9EF005171B4 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C44624ECC9EF005171B4 /* House.m */; };
+		11E4C44924EDFA47005171B4 /* MortgageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C44824EDFA46005171B4 /* MortgageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,14 @@
 		11E4C42924ECBC14005171B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11E4C42C24ECBC14005171B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11E4C42E24ECBC14005171B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11E4C43E24ECC544005171B4 /* MortgageCalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MortgageCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
+		11E4C43F24ECC545005171B4 /* Mortgage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mortgage.h; sourceTree = "<group>"; };
+		11E4C44024ECC545005171B4 /* Mortgage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mortgage.m; sourceTree = "<group>"; };
+		11E4C44224ECC55E005171B4 /* DebtIncomeRatio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebtIncomeRatio.h; sourceTree = "<group>"; };
+		11E4C44324ECC55E005171B4 /* DebtIncomeRatio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebtIncomeRatio.m; sourceTree = "<group>"; };
+		11E4C44524ECC9EF005171B4 /* House.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
+		11E4C44624ECC9EF005171B4 /* House.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
+		11E4C44824EDFA46005171B4 /* MortgageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 		11E4C43624ECBC2D005171B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11E4C44824EDFA46005171B4 /* MortgageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +108,13 @@
 		11E4C43724ECBC31005171B4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11E4C43F24ECC545005171B4 /* Mortgage.h */,
+				11E4C44024ECC545005171B4 /* Mortgage.m */,
+				11E4C44224ECC55E005171B4 /* DebtIncomeRatio.h */,
+				11E4C44324ECC55E005171B4 /* DebtIncomeRatio.m */,
+				11E4C44524ECC9EF005171B4 /* House.h */,
+				11E4C44624ECC9EF005171B4 /* House.m */,
+				11E4C43E24ECC544005171B4 /* MortgageCalculator-Bridging-Header.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +167,7 @@
 				TargetAttributes = {
 					11E4C41C24ECBC0B005171B4 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -186,6 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E4C44724ECC9EF005171B4 /* House.m in Sources */,
+				11E4C44124ECC545005171B4 /* Mortgage.m in Sources */,
+				11E4C44924EDFA47005171B4 /* MortgageController.swift in Sources */,
+				11E4C44424ECC55E005171B4 /* DebtIncomeRatio.m in Sources */,
 				11E4C42524ECBC0B005171B4 /* ViewController.swift in Sources */,
 				11E4C42124ECBC0B005171B4 /* AppDelegate.swift in Sources */,
 				11E4C42324ECBC0B005171B4 /* SceneDelegate.swift in Sources */,
@@ -332,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5ARGK4ZJP;
 				INFOPLIST_FILE = MortgageCalculator/Info.plist;
@@ -341,6 +367,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaStudents.pt5.MortgageCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MortgageCalculator/Models/MortgageCalculator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5ARGK4ZJP;
 				INFOPLIST_FILE = MortgageCalculator/Info.plist;
@@ -359,6 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaStudents.pt5.MortgageCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MortgageCalculator/Models/MortgageCalculator-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
