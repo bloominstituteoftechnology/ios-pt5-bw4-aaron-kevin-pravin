@@ -10,8 +10,8 @@
 
 @implementation DebtIncomeRatio
 
-- (instancetype)initWithRecurringMonthlyDebt:(NSNumber *)recurringMonthlyDebt
-                          grossMonthlyIncome:(NSNumber *)grossMonthlyIncome
+- (instancetype)initWithRecurringMonthlyDebt:(double)recurringMonthlyDebt
+                          grossMonthlyIncome:(double)grossMonthlyIncome
 {
     if (self = [super init]) {
         _recurringMonthlyDebt = recurringMonthlyDebt;

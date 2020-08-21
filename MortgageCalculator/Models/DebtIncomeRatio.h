@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DebtIncomeRatio : NSObject
 
-@property (nonatomic) NSNumber *recurringMonthlyDebt;
-@property (nonatomic) NSNumber *grossMonthlyIncome;
+@property (nonatomic) double *recurringMonthlyDebt;
+@property (nonatomic) double *grossMonthlyIncome;
 
 @end
 

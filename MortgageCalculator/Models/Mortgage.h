@@ -14,13 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSNumber *homePurchasePrice;
 @property (nonatomic) NSNumber *downPayment;
-@property (nonatomic, copy) NSString *loanTerm;
+@property (nonatomic) NSNumber *loanTerm;
 @property (nonatomic) NSNumber *interestRate;
 
 - (instancetype)initWithHomePurchasePrice:(NSNumber *)homePurchasePrice
  downpayment:(NSNumber *)downpayment
     loanTerm:(NSString *)loanTerm
                              interestRate:(NSNumber *)interestRate;
+
+- (void)encodeWithCoder:(NSCoder *)aCoder;
+
 
 @end
 
