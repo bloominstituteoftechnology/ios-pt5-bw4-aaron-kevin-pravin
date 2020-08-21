@@ -12,17 +12,32 @@
 
 - (instancetype)initWithHomePurchasePrice:(NSNumber *)homePurchasePrice
                               downpayment:(NSNumber *)downpayment
-                                 loanTerm:(NSString *)loanTerm
+                                 loanTerm:(NSNumber *)loanTerm
                              interestRate:(NSNumber *)interestRate
 {
     if (self = [super init]) {
         _homePurchasePrice = homePurchasePrice;
         _downPayment = downpayment;
-        _loanTerm = [loanTerm copy];
+        _loanTerm = loanTerm;
         _interestRate = interestRate;
     }
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.homePurchasePrice];
+    [aCoder encodeObject:self.downPayment];
+    [aCoder encodeObject:self.loanTerm];
+    [aCoder encodeObject:self.interestRate];
+}
 
 @end

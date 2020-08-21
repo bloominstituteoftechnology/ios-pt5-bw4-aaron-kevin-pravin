@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface House : NSObject
 
 @property (nonatomic, copy) NSString *address;
-@property (nonatomic,) NSNumber *calculatedMortgage;
+@property (nonatomic) double *calculatedMortgage;
 
 @end
 
