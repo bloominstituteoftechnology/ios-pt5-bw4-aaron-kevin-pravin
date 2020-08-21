@@ -8,13 +8,18 @@
 import MapKit
 import UIKit
 
-class HomeDetailViewController: UIViewController{
+
+class HomeDetailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var homeAddressLabel: UILabel!
     @IBOutlet weak var homePriceLabel: UILabel!
     @IBOutlet weak var homeMonthlyPaymentLabel: UILabel!
     @IBOutlet weak var addPictureButton: UIButton!
+    
+    
+    var homeDelegate: House?
+    var mortgageDelegate: Mortgage?
     
     
 
@@ -32,6 +37,4 @@ class HomeDetailViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     }
-   
-
 }
