@@ -13,6 +13,7 @@
 		11E4C42824ECBC0B005171B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42624ECBC0B005171B4 /* Main.storyboard */; };
 		11E4C42A24ECBC14005171B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42924ECBC14005171B4 /* Assets.xcassets */; };
 		11E4C42D24ECBC14005171B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42B24ECBC14005171B4 /* LaunchScreen.storyboard */; };
+		11E4C44D24EF6D72005171B4 /* MortgageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C44C24EF6D72005171B4 /* MortgageController.swift */; };
 		AB21A16724EF668700D23E11 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = AB21A16124EF668700D23E11 /* House.m */; };
 		AB21A16824EF668700D23E11 /* Mortgage.m in Sources */ = {isa = PBXBuildFile; fileRef = AB21A16224EF668700D23E11 /* Mortgage.m */; };
 		AB21A16924EF668700D23E11 /* DebtIncomeRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = AB21A16524EF668700D23E11 /* DebtIncomeRatio.m */; };
@@ -27,6 +28,7 @@
 		11E4C42924ECBC14005171B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11E4C42C24ECBC14005171B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11E4C42E24ECBC14005171B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11E4C44C24EF6D72005171B4 /* MortgageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageController.swift; sourceTree = "<group>"; };
 		AB21A16024EF668700D23E11 /* MortgageCalculator-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MortgageCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
 		AB21A16124EF668700D23E11 /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
 		AB21A16224EF668700D23E11 /* Mortgage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mortgage.m; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		11E4C43624ECBC2D005171B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11E4C44C24EF6D72005171B4 /* MortgageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				AB21A16824EF668700D23E11 /* Mortgage.m in Sources */,
 				AB21A16924EF668700D23E11 /* DebtIncomeRatio.m in Sources */,
+				11E4C44D24EF6D72005171B4 /* MortgageController.swift in Sources */,
 				11E4C42524ECBC0B005171B4 /* ViewController.swift in Sources */,
 				11E4C42124ECBC0B005171B4 /* AppDelegate.swift in Sources */,
 				AB21A16724EF668700D23E11 /* House.m in Sources */,
