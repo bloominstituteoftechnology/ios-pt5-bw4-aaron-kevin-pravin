@@ -101,7 +101,6 @@
 				11E4C42024ECBC0B005171B4 /* AppDelegate.swift */,
 				11E4C42224ECBC0B005171B4 /* SceneDelegate.swift */,
 				11E4C42424ECBC0B005171B4 /* ViewController.swift */,
-				AB21A16024EF668700D23E11 /* MortgageCalculator-Bridging-Header.h */,
 				11E4C42924ECBC14005171B4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -124,6 +123,7 @@
 				AB21A16124EF668700D23E11 /* House.m */,
 				AB21A16424EF668700D23E11 /* Mortgage.h */,
 				AB21A16224EF668700D23E11 /* Mortgage.m */,
+				AB21A16024EF668700D23E11 /* MortgageCalculator-Bridging-Header.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";

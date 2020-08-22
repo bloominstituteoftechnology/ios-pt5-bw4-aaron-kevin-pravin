@@ -5,6 +5,7 @@
 //  Created by Joe on 8/21/20.
 //  Copyright © 2020 Kevin Stewart. All rights reserved.
 //
+import CoreLocation
 import MapKit
 import UIKit
 
@@ -18,17 +19,27 @@ class HomeDetailViewController: UIViewController {
     @IBOutlet weak var addPictureButton: UIButton!
     
     
-    var homeDelegate: House?
+    var houseDelegate: House?
     var mortgageDelegate: Mortgage?
-    
+    let formatter = NumberFormatter()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      updateViews()
     }
     
+    func updateViews() {
+        guard let house = houseDelegate, let mortgage = mortgageDelegate else { return }
+        homeAddressLabel.text = house.address
+        homePriceLabel.text = formatter.string(from: mortgage.homePurchasePrice)
+        homeMonthlyPaymentLabel.text = formatter.string(from: house.calculatedMortgage)
+        let coordinates = convertAddressToCoordinates(house: <#T##House#>)
+        let location = CLLocation(latitude: coordinates.0, longitude: coordinates.1)
+        mapView.centerToLocation(location)
+        
+    }
 
 
     // MARK: - Navigation

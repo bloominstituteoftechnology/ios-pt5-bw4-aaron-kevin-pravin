@@ -7,6 +7,7 @@
 //
 
 #import "House.h"
+#import "MortgageCalculator-Swift.h"
 
 @implementation House
 
