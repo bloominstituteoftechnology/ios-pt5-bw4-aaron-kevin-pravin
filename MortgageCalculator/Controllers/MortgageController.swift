@@ -93,7 +93,7 @@ class MortgageController {
         
         do {
             let encoder = PropertyListEncoder()
-            let data = try encoder.encode(mortgageArray)
+            let data = try encoder.encode(mortgageArray.map { $0.mortgageSnapShot })
             try data.write(to: url)
         } catch {
             print("Error saving data: \(error)")
@@ -108,7 +108,7 @@ class MortgageController {
         do {
             let data = try Data(contentsOf: url)
             let decoder = PropertyListDecoder()
-            mortgageArray = try decoder.decode([Mortgage].self, from: data)
+            mortgageArray = (try decoder.decode([MortgageSnapShot].self, from: data)).map { Mortgage(mortgageSnapShot: $0) }
         } catch {
             print("Error loading data: \(error)")
         }
