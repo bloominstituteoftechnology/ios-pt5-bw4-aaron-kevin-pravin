@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class MortgageSnapShot;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Mortgage : NSObject
@@ -17,13 +19,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSNumber *loanTerm;
 @property (nonatomic) NSNumber *interestRate;
 
+
+
 - (instancetype)initWithHomePurchasePrice:(NSNumber *)homePurchasePrice
- downpayment:(NSNumber *)downpayment
-    loanTerm:(NSString *)loanTerm
+                              downPayment:(NSNumber *)downpayment
+                                 loanTerm:(NSNumber *)loanTerm
                              interestRate:(NSNumber *)interestRate;
 
-- (void)encodeWithCoder:(NSCoder *)aCoder;
+@property (nonatomic, readonly) MortgageSnapShot *mortgageSnapShot;
 
+- (instancetype)initWithMortgageSnapShot:(MortgageSnapShot *)mortgageSnapShot;
 
 @end
 

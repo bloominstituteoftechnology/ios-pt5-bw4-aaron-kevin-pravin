@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111E9B9F24F0B3F300784AEF /* MortgageSnapShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E9B9E24F0B3F300784AEF /* MortgageSnapShot.swift */; };
 		11E4C42124ECBC0B005171B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C42024ECBC0B005171B4 /* AppDelegate.swift */; };
 		11E4C42324ECBC0B005171B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C42224ECBC0B005171B4 /* SceneDelegate.swift */; };
 		11E4C42524ECBC0B005171B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C42424ECBC0B005171B4 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111E9B9E24F0B3F300784AEF /* MortgageSnapShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MortgageSnapShot.swift; path = MortgageCalculator/MortgageSnapShot.swift; sourceTree = SOURCE_ROOT; };
 		11E4C41D24ECBC0B005171B4 /* MortgageCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E4C42024ECBC0B005171B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11E4C42224ECBC0B005171B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		11E4C43424ECBC21005171B4 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				111E9B9E24F0B3F300784AEF /* MortgageSnapShot.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				11E4C42124ECBC0B005171B4 /* AppDelegate.swift in Sources */,
 				AB21A16724EF668700D23E11 /* House.m in Sources */,
 				11E4C42324ECBC0B005171B4 /* SceneDelegate.swift in Sources */,
+				111E9B9F24F0B3F300784AEF /* MortgageSnapShot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +371,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaStudents.pt5.MortgageCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MortgageCalculator/Models/MortgageCalculator-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaStudents.pt5.MortgageCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MortgageCalculator/Models/MortgageCalculator-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

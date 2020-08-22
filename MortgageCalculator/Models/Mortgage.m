@@ -7,11 +7,12 @@
 //
 
 #import "Mortgage.h"
+#import "MortgageCalculator-Swift.h"
 
 @implementation Mortgage
 
 - (instancetype)initWithHomePurchasePrice:(NSNumber *)homePurchasePrice
-                              downpayment:(NSNumber *)downpayment
+                              downPayment:(NSNumber *)downpayment
                                  loanTerm:(NSNumber *)loanTerm
                              interestRate:(NSNumber *)interestRate
 {
@@ -24,20 +25,18 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)coder
+- (MortgageSnapShot *)mortgageSnapShot
 {
-    if (self = [super init]) {
-        
-    }
-    return self;
+    return [[MortgageSnapShot alloc] initWithHomePurchasePrice:self.homePurchasePrice.doubleValue downPayment:self.downPayment.doubleValue loanTerm:self.loanTerm.doubleValue interestRate:self.interestRate.doubleValue];
 }
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
+- (instancetype)initWithMortgageSnapShot:(MortgageSnapShot *)mortgageSnapShot
 {
-    [aCoder encodeObject:self.homePurchasePrice];
-    [aCoder encodeObject:self.downPayment];
-    [aCoder encodeObject:self.loanTerm];
-    [aCoder encodeObject:self.interestRate];
+    double homePurchasePrice = mortgageSnapShot.homePurchasePrice;
+    double downPayment = mortgageSnapShot.downPayment;
+    double loanTerm = mortgageSnapShot.loanTerm;
+    double interestRate = mortgageSnapShot.interestRate;
+    return [self initWithHomePurchasePrice:@(homePurchasePrice) downPayment:@(downPayment) loanTerm:@(loanTerm) interestRate:@(interestRate)];
 }
 
 @end
