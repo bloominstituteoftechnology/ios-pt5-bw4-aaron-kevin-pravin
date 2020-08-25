@@ -23,3 +23,13 @@ class MortgageSnapShot: NSObject, Codable {
     
     
 }
+
+class HouseSnapShot: NSObject, Codable {
+    @objc init(address: String, calculatedMortgage: Double) {
+        self.address = address
+        self.calculatedMortgage = calculatedMortgage
+    }
+    
+    @objc var address: String
+    @objc var calculatedMortgage: Double
+}
