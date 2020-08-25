@@ -18,9 +18,9 @@
 		AB21A16724EF668700D23E11 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = AB21A16124EF668700D23E11 /* House.m */; };
 		AB21A16824EF668700D23E11 /* Mortgage.m in Sources */ = {isa = PBXBuildFile; fileRef = AB21A16224EF668700D23E11 /* Mortgage.m */; };
 		AB21A16924EF668700D23E11 /* DebtIncomeRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = AB21A16524EF668700D23E11 /* DebtIncomeRatio.m */; };
+		AB3C4D2B24F19FF30029139A /* MortgageCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C4D2A24F19FF30029139A /* MortgageCalculatorViewController.swift */; };
 		D74338F824EFF83C00E5D70E /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74338F724EFF83C00E5D70E /* HomeDetailViewController.swift */; };
 		D74338FB24EFFB7F00E5D70E /* MapkitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74338FA24EFFB7F00E5D70E /* MapkitHelper.swift */; };
-		AB3C4D2B24F19FF30029139A /* MortgageCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C4D2A24F19FF30029139A /* MortgageCalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +41,9 @@
 		AB21A16424EF668700D23E11 /* Mortgage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mortgage.h; sourceTree = "<group>"; };
 		AB21A16524EF668700D23E11 /* DebtIncomeRatio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtIncomeRatio.m; sourceTree = "<group>"; };
 		AB21A16624EF668700D23E11 /* DebtIncomeRatio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtIncomeRatio.h; sourceTree = "<group>"; };
+		AB3C4D2A24F19FF30029139A /* MortgageCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorViewController.swift; sourceTree = "<group>"; };
 		D74338F724EFF83C00E5D70E /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		D74338FA24EFFB7F00E5D70E /* MapkitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapkitHelper.swift; path = MortgageCalculator/Controllers/MapkitHelper.swift; sourceTree = SOURCE_ROOT; };
-		AB3C4D2A24F19FF30029139A /* MortgageCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,7 +384,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5ARGK4ZJP;
-				INFOPLIST_FILE = MortgageCalculator/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MortgageCalculator/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +405,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5ARGK4ZJP;
-				INFOPLIST_FILE = MortgageCalculator/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MortgageCalculator/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
