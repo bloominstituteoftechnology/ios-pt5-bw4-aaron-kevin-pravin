@@ -15,6 +15,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     // MARK: - Table view data source
@@ -34,19 +35,19 @@ class HomeTableViewController: UITableViewController {
         return cell
     }
     
-
+    /*
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
-        mortgageController.saveToPersistentStore()
-        mortgageController.loadFromPersistentStore()
-        tableView.reloadData()
+     // Delete the row from the data source
      tableView.deleteRows(at: [indexPath], with: .fade)
      } else if editingStyle == .insert {
-        
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
      }
      }
-    
+     */
+
+     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
