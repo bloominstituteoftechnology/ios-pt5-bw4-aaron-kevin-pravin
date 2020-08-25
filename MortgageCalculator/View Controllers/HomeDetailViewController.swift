@@ -23,11 +23,11 @@ class HomeDetailViewController: UIViewController {
     var mortgageDelegate: Mortgage?
     let formatter = NumberFormatter()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      updateViews()
+        addPictureButton.isHidden = true
+        updateViews()
     }
     
     func updateViews() {
@@ -35,17 +35,18 @@ class HomeDetailViewController: UIViewController {
         homeAddressLabel.text = house.address
         homePriceLabel.text = formatter.string(from: mortgage.homePurchasePrice)
         homeMonthlyPaymentLabel.text = formatter.string(from: house.calculatedMortgage)
-        let coordinates = convertAddressToCoordinates(house: <#T##House#>)
+        let coordinates = convertAddressToCoordinates(house: house)
         let location = CLLocation(latitude: coordinates.0, longitude: coordinates.1)
         mapView.centerToLocation(location)
-        
     }
+    
 
-
+    
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
     }
 }
