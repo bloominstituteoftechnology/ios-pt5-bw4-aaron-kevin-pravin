@@ -10,8 +10,6 @@
 
 @class MortgageSnapShot;
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface Mortgage : NSObject
 
 @property (nonatomic) NSNumber *homePurchasePrice;
@@ -32,4 +30,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
