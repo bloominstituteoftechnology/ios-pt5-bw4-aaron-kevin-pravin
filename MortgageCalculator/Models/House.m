@@ -21,4 +21,18 @@
     return self;
 }
 
+- (HouseSnapShot *)houseSnapShot
+{
+    return [[HouseSnapShot alloc] initWithAddress:self.address
+                               calculatedMortgage:self.calculatedMortgage.doubleValue];
+}
+
+- (instancetype)initWithHouseSnapShot:(HouseSnapShot *)houseSnapShot
+{
+    NSString *address = houseSnapShot.address;
+    double calculatedMortgage = houseSnapShot.calculatedMortgage;
+    return [self initWithAddress:address
+              calculatedMortgage:@(calculatedMortgage)];
+}
+
 @end

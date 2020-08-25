@@ -27,7 +27,10 @@
 
 - (MortgageSnapShot *)mortgageSnapShot
 {
-    return [[MortgageSnapShot alloc] initWithHomePurchasePrice:self.homePurchasePrice.doubleValue downPayment:self.downPayment.doubleValue loanTerm:self.loanTerm.doubleValue interestRate:self.interestRate.doubleValue];
+    return [[MortgageSnapShot alloc] initWithHomePurchasePrice:self.homePurchasePrice.doubleValue
+                                                   downPayment:self.downPayment.doubleValue
+                                                      loanTerm:self.loanTerm.doubleValue
+                                                  interestRate:self.interestRate.doubleValue];
 }
 
 - (instancetype)initWithMortgageSnapShot:(MortgageSnapShot *)mortgageSnapShot
@@ -36,7 +39,10 @@
     double downPayment = mortgageSnapShot.downPayment;
     double loanTerm = mortgageSnapShot.loanTerm;
     double interestRate = mortgageSnapShot.interestRate;
-    return [self initWithHomePurchasePrice:@(homePurchasePrice) downPayment:@(downPayment) loanTerm:@(loanTerm) interestRate:@(interestRate)];
+    return [self initWithHomePurchasePrice:@(homePurchasePrice)
+                               downPayment:@(downPayment)
+                                  loanTerm:@(loanTerm)
+                              interestRate:@(interestRate)];
 }
 
 @end
