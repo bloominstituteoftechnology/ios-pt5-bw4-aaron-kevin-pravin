@@ -17,6 +17,7 @@ class MortgageCalculatorViewController: UIViewController {
     var loanAjustCalculation: Float = 0.00
     var downPaymentMinusHomePrice: Float = 0.00
     var monthlyPayments: [[Float]] = [[]]
+    let mortgageController = MortgageController()
    
     var interestDivisorByTerm: Float {
         interestAmount / loanTerm
@@ -127,6 +128,11 @@ class MortgageCalculatorViewController: UIViewController {
         return scheduleArray
     }
     
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        mortgageController.saveToPersistentStore()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -138,3 +144,5 @@ class MortgageCalculatorViewController: UIViewController {
             return (self * divisor).rounded() / divisor
         }
     }
+
+
