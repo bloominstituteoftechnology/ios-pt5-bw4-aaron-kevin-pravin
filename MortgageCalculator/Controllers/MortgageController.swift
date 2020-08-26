@@ -65,6 +65,7 @@ class MortgageController {
     
     func addHouse(_ house: House) {
         houseArray.append(house)
+        print("House array total: \(houseArray)")
     }
     
     func deleteHouse(_ house: House) {
