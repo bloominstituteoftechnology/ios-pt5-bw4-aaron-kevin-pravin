@@ -92,12 +92,13 @@ class MortgageController {
     }
     
     func saveToPersistentStore() {
+        print("Save persistence called")
         guard let url = persistentFileURL else { return }
         
         do {
             let encoder = PropertyListEncoder()
-            let data = try encoder.encode(mortgageArray.map { $0.mortgageSnapShot })
-            try data.write(to: url)
+//            let data = try encoder.encode(mortgageArray.map { $0.mortgageSnapShot })
+//            try data.write(to: url)
             let houseData = try encoder.encode(houseArray.map { $0.houseSnapShot })
             try houseData.write(to: url)
         } catch {
@@ -106,6 +107,8 @@ class MortgageController {
     }
     
     func loadFromPersistentStore() {
+        print("Load persistence called")
+        
         let fileManager = FileManager.default
         guard let url = persistentFileURL,
             fileManager.fileExists(atPath: url.path) else { return }
@@ -113,8 +116,9 @@ class MortgageController {
         do {
             let data = try Data(contentsOf: url)
             let decoder = PropertyListDecoder()
-            mortgageArray = (try decoder.decode([MortgageSnapShot].self, from: data)).map { Mortgage(mortgageSnapShot: $0) }
+//            mortgageArray = (try decoder.decode([MortgageSnapShot].self, from: data)).map { Mortgage(mortgageSnapShot: $0) }
             houseArray = (try decoder.decode([HouseSnapShot].self, from: data)).map { House(houseSnapShot: $0) }
+            print("Loading houses: \(houseArray)")
         } catch {
             print("Error loading data: \(error)")
         }
