@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class MortgageController {
     
@@ -59,6 +60,7 @@ class MortgageController {
     
     
     // MARK: - House properties and methods
+    var house = House()
     var houseArray: [House] = []
     
     func addHouse(_ house: House) {
@@ -95,6 +97,8 @@ class MortgageController {
             let encoder = PropertyListEncoder()
             let data = try encoder.encode(mortgageArray.map { $0.mortgageSnapShot })
             try data.write(to: url)
+            let houseData = try encoder.encode(houseArray.map { $0.houseSnapShot })
+            try houseData.write(to: url)
         } catch {
             print("Error saving data: \(error)")
         }
@@ -109,8 +113,24 @@ class MortgageController {
             let data = try Data(contentsOf: url)
             let decoder = PropertyListDecoder()
             mortgageArray = (try decoder.decode([MortgageSnapShot].self, from: data)).map { Mortgage(mortgageSnapShot: $0) }
+            houseArray = (try decoder.decode([HouseSnapShot].self, from: data)).map { House(houseSnapShot: $0) }
         } catch {
             print("Error loading data: \(error)")
+        }
+    }
+    
+    // MARK: - Alert method
+    
+    func alertUserInvalidAddress() {
+        if house != house {
+            let alertController = UIAlertController(title: "The address entered was invalid",
+                                                    message: "Please enter a valid address",
+                                                    preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Ok",
+                                            style: .default,
+                                            handler: nil)
+            alertController.addAction(alertAction)
+            alertController.present(alertController, animated: true)
         }
     }
 }
