@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lI8-88-BFB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lI8-88-BFB">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="b4t-L0-zxg">
-                                <rect key="frame" x="20" y="106" width="335" height="50"/>
+                                <rect key="frame" x="20" y="150" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5e-To-lZY">
-                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152.33333333333334" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGO-sX-mQm">
-                                        <rect key="frame" x="285" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="324" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fTo-xe-L4a">
-                                <rect key="frame" x="15" y="176" width="345" height="436.5"/>
+                                <rect key="frame" x="15" y="220.00000000000003" width="384" height="435.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Purchase Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQs-xd-gKX">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="20.333333333333332"/>
@@ -42,16 +42,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="doE-Y8-ZRE">
-                                        <rect key="frame" x="0.0" y="40.333333333333343" width="384" height="30"/>
+                                        <rect key="frame" x="0.0" y="40.333333333333314" width="384" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1000000" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-Nl-QMW">
-                                                <rect key="frame" x="-2" y="0.0" width="264.5" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="303.33333333333331" height="31"/>
                                                 <connections>
                                                     <action selector="amountSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zpb-Pi-XqO"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlr-l1-d2f">
-                                                <rect key="frame" x="275.5" y="0.0" width="69.5" height="30"/>
+                                                <rect key="frame" x="314.33333333333331" y="0.0" width="69.666666666666686" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -68,13 +68,13 @@
                                         <rect key="frame" x="0.0" y="130.66666666666669" width="384" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rX9-3R-0SI">
-                                                <rect key="frame" x="-2" y="0.0" width="320" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="359" height="31"/>
                                                 <connections>
                                                     <action selector="downPaymentSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ehd-EH-qIJ"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcS-eY-PYq">
-                                                <rect key="frame" x="331" y="0.0" width="14" height="30"/>
+                                                <rect key="frame" x="370" y="0.0" width="14" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -91,13 +91,13 @@
                                         <rect key="frame" x="0.0" y="221" width="384" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-1P-tbF">
-                                                <rect key="frame" x="-2" y="0.0" width="320" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="359" height="31"/>
                                                 <connections>
                                                     <action selector="interestPercetangeSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2l0-6X-TXV"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYB-A3-Bab">
-                                                <rect key="frame" x="331" y="0.0" width="14" height="30"/>
+                                                <rect key="frame" x="370" y="0.0" width="14" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -114,13 +114,13 @@
                                         <rect key="frame" x="0.0" y="311.33333333333337" width="384" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="99A-WX-Vp9">
-                                                <rect key="frame" x="-2" y="0.0" width="291.5" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="330.66666666666669" height="31"/>
                                                 <connections>
                                                     <action selector="termSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mDr-yH-euN"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaS-ip-fem">
-                                                <rect key="frame" x="302.5" y="0.0" width="42.5" height="30"/>
+                                                <rect key="frame" x="341.66666666666669" y="0.0" width="42.333333333333314" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKC-NG-K1a">
-                                <rect key="frame" x="121" y="627.5" width="133" height="48"/>
+                                <rect key="frame" x="140.66666666666666" y="670.66666666666663" width="132.99999999999997" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
@@ -166,6 +166,7 @@
                     <navigationItem key="navigationItem" title="Mortgage Calculator" id="cL9-oN-dTC">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zzn-kL-Vxb">
                             <connections>
+                                <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="ndu-Rr-YaT"/>
                                 <segue destination="6ZE-jW-i2N" kind="show" id="BTo-SP-sk8"/>
                             </connections>
                         </barButtonItem>
