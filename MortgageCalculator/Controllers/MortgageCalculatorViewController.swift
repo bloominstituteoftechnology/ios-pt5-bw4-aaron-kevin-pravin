@@ -104,10 +104,10 @@ class MortgageCalculatorViewController: UIViewController {
         monthlyPayments = getPaymentSchedule(loanAmount: loanAmount, termMonth: Int(loanTerm), interestRate: interestRate)
     }
     
-    @IBAction func saveButtonPressed(_ sender: Any) {
-        mortgageController.addHouse(House(address: addressTextField.text ?? "No address", calculatedMortgage: NSNumber(value: monthlyPayment)))
-      mortgageController.saveToPersistentStore()
-    }
+//    @IBAction func saveButtonPressed(_ sender: Any) {
+//        mortgageController.addHouse(House(address: addressTextField.text ?? "No address", calculatedMortgage: NSNumber(value: monthlyPayment)))
+//      mortgageController.saveToPersistentStore()
+//    }
 
     func monthlyPayment(loanAmount: Float, termMonth: Float, interestRate: Float) -> Float {
         let r : Float = interestRate / (100 * 12)
@@ -142,6 +142,9 @@ class MortgageCalculatorViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToSavedHomes" {
             if let tableViewVC = segue.destination as? HomeTableViewController {
+                print("Save button tapped...running segue.")
+                mortgageController.addHouse(House(address: addressTextField.text ?? "No address", calculatedMortgage: NSNumber(value: monthlyPayment)))
+                mortgageController.saveToPersistentStore()
                 tableViewVC.mortgageController = mortgageController
             }
         }
