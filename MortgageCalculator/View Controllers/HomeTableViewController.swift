@@ -15,7 +15,10 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
 
+=======
+>>>>>>> Added Save IBAction in mortgage Controller.
     }
     
     // MARK: - Table view data source
@@ -44,9 +47,15 @@ class HomeTableViewController: UITableViewController {
         tableView.reloadData()
      tableView.deleteRows(at: [indexPath], with: .fade)
      } else if editingStyle == .insert {
+<<<<<<< HEAD
 
      }
     
+=======
+        
+     }
+     }
+>>>>>>> Added Save IBAction in mortgage Controller.
     
 
     // MARK: - Navigation
