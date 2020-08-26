@@ -167,11 +167,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zzn-kL-Vxb">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="ndu-Rr-YaT"/>
-                                <segue destination="6ZE-jW-i2N" kind="show" id="BTo-SP-sk8"/>
+                                <segue destination="6ZE-jW-i2N" kind="show" identifier="ToSavedHomes" id="BTo-SP-sk8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addressTextField" destination="33a-lQ-EDU" id="Ufy-B7-OOf"/>
                         <outlet property="calculatePaymentOutlet" destination="tKC-NG-K1a" id="JIh-qa-cXr"/>
                         <outlet property="downPaymentLabel" destination="tux-hc-mAV" id="uey-E0-aXl"/>
                         <outlet property="downPaymentPercentageLabel" destination="kcS-eY-PYq" id="1FX-Hp-ABz"/>
@@ -195,13 +196,13 @@
         <!--Saved Homes-->
         <scene sceneID="4oC-jx-AEk">
             <objects>
-                <tableViewController id="6ZE-jW-i2N" sceneMemberID="viewController">
+                <tableViewController id="6ZE-jW-i2N" customClass="HomeTableViewController" customModule="MortgageCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="82G-jy-FsE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Z2F-ub-IOb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" id="Z2F-ub-IOb">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z2F-ub-IOb" id="a8d-E7-ETA">

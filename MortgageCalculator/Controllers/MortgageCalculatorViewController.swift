@@ -48,6 +48,7 @@ class MortgageCalculatorViewController: UIViewController {
     @IBOutlet var downPaymentSlider: UISlider!
     @IBOutlet var downPaymentPercentageLabel: UILabel!
     
+    @IBOutlet var addressTextField: UITextField!
     
     @IBOutlet var interestRateLabel: UILabel!
     @IBOutlet var interestPercentageSlider: UISlider!
@@ -104,6 +105,7 @@ class MortgageCalculatorViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        mortgageController.addHouse(House(address: addressTextField.text ?? "No address", calculatedMortgage: NSNumber(value: monthlyPayment)))
       mortgageController.saveToPersistentStore()
     }
 
@@ -135,6 +137,14 @@ class MortgageCalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToSavedHomes" {
+            if let tableViewVC = segue.destination as? HomeTableViewController {
+                tableViewVC.mortgageController = mortgageController
+            }
+        }
     }
 }
     

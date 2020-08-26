@@ -10,28 +10,29 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
-    let mortgageController = MortgageController()
+    var mortgageController: MortgageController?
     let formatter = NumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mortgageController.loadFromPersistentStore()
+        mortgageController?.loadFromPersistentStore()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return mortgageController.houseArray.count
+        print("\(mortgageController?.houseArray.count)")
+        return mortgageController?.houseArray.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
         
-        let info = mortgageController.houseArray[indexPath.row]
-        cell.textLabel?.text = info.address
-        cell.detailTextLabel?.text = formatter.string(from: info.calculatedMortgage)
+        let info = mortgageController?.houseArray[indexPath.row]
+        cell.textLabel?.text = info?.address
+        cell.detailTextLabel?.text = formatter.string(from: info?.calculatedMortgage ?? 0)
         return cell
     }
     
@@ -69,8 +70,8 @@ class HomeTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToDetail" {
           if let indexPath = tableView.indexPathForSelectedRow, let vc = segue.destination as? HomeDetailViewController {
-            vc.houseDelegate = mortgageController.houseArray[indexPath.row]
-            vc.mortgageDelegate = mortgageController.mortgageArray[indexPath.row]
+            vc.houseDelegate = mortgageController?.houseArray[indexPath.row]
+            vc.mortgageDelegate = mortgageController?.mortgageArray[indexPath.row]
           }
       }
     }
