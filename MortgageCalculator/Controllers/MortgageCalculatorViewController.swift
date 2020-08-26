@@ -10,6 +10,8 @@ import UIKit
 
 class MortgageCalculatorViewController: UIViewController {
     
+    let mortgageController = MortgageController()
+    
     var homePrice: Float = 0.00
     var loanTerm: Float = 0.00
     var downPayment: Float = 0.00
@@ -99,6 +101,10 @@ class MortgageCalculatorViewController: UIViewController {
         monthlyPaymentLabel.text = "$\(roundedResult)"
         
         monthlyPayments = getPaymentSchedule(loanAmount: loanAmount, termMonth: Int(loanTerm), interestRate: interestRate)
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+      mortgageController.saveToPersistentStore()
     }
 
     func monthlyPayment(loanAmount: Float, termMonth: Float, interestRate: Float) -> Float {
