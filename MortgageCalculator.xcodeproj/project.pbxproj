@@ -21,7 +21,6 @@
 		AB3C4D2B24F19FF30029139A /* MortgageCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C4D2A24F19FF30029139A /* MortgageCalculatorViewController.swift */; };
 		D74338F824EFF83C00E5D70E /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74338F724EFF83C00E5D70E /* HomeDetailViewController.swift */; };
 		D74338FB24EFFB7F00E5D70E /* MapkitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74338FA24EFFB7F00E5D70E /* MapkitHelper.swift */; };
-		D74338FF24F4BE7C00E5D70E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74338FE24F4BE7C00E5D70E /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		AB3C4D2A24F19FF30029139A /* MortgageCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorViewController.swift; sourceTree = "<group>"; };
 		D74338F724EFF83C00E5D70E /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		D74338FA24EFFB7F00E5D70E /* MapkitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapkitHelper.swift; path = MortgageCalculator/Controllers/MapkitHelper.swift; sourceTree = SOURCE_ROOT; };
-		D74338FE24F4BE7C00E5D70E /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				D74338F724EFF83C00E5D70E /* HomeDetailViewController.swift */,
-				D74338FE24F4BE7C00E5D70E /* HomeTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -230,7 +227,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74338FF24F4BE7C00E5D70E /* HomeTableViewController.swift in Sources */,
 				D74338FB24EFFB7F00E5D70E /* MapkitHelper.swift in Sources */,
 				AB3C4D2B24F19FF30029139A /* MortgageCalculatorViewController.swift in Sources */,
 				AB21A16824EF668700D23E11 /* Mortgage.m in Sources */,
