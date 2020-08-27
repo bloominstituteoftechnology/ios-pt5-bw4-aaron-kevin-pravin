@@ -19,6 +19,8 @@ class MortgageCalculatorViewController: UIViewController {
     var loanAjustCalculation: Float = 0.00
     var downPaymentMinusHomePrice: Float = 0.00
     var monthlyPayments: [[Float]] = [[]]
+    
+    // MARK: - Computed Properties
    
     var interestDivisorByTerm: Float {
         interestAmount / loanTerm
@@ -37,6 +39,8 @@ class MortgageCalculatorViewController: UIViewController {
     }
     
     var monthlyPayment: Float = 0.00
+    
+    // MARK: - IBOutlets
     
     @IBOutlet var monthlyPaymentLabel: UILabel!
     
@@ -60,12 +64,13 @@ class MortgageCalculatorViewController: UIViewController {
     
     @IBOutlet var calculatePaymentOutlet: UIButton!
     
+    // MARK: - IBActions
+    
     @IBAction func amountSlider(_ sender: UISlider) {
         
         let homePricing = String(format: "%.2f", sender.value)
         homePriceLabel.text = "$\(homePricing)"
         homePrice = Float(homePricing)!
-  
     }
 
     @IBAction func downPaymentSliderChanged(_ sender: UISlider) {
@@ -100,14 +105,9 @@ class MortgageCalculatorViewController: UIViewController {
      monthlyPayment = monthlyPayment(loanAmount: loanAmount, termMonth: loanTerm, interestRate: interestRate)
         let roundedResult = monthlyPayment.rounded(toPlaces: 2)
         monthlyPaymentLabel.text = "$\(roundedResult)"
-        
-        monthlyPayments = getPaymentSchedule(loanAmount: loanAmount, termMonth: Int(loanTerm), interestRate: interestRate)
     }
     
-//    @IBAction func saveButtonPressed(_ sender: Any) {
-//        mortgageController.addHouse(House(address: addressTextField.text ?? "No address", calculatedMortgage: NSNumber(value: monthlyPayment)))
-//      mortgageController.saveToPersistentStore()
-//    }
+    // MARK: - Method
 
     func monthlyPayment(loanAmount: Float, termMonth: Float, interestRate: Float) -> Float {
         let r : Float = interestRate / (100 * 12)
@@ -116,28 +116,12 @@ class MortgageCalculatorViewController: UIViewController {
         let payment : Float = l * (r * pow((1 + r), m)) / (pow((1 + r), m) - 1)
         return payment
     }
-    
-    func getPaymentSchedule(loanAmount: Float, termMonth: Int, interestRate: Float) -> [[Float]] {
-        let r : Float = interestRate / (100 * 12)
-        _ = monthlyPayment(loanAmount: loanAmount, termMonth: loanTerm, interestRate: interestRate)
-        var totalInterest: Float = 0
-        var remainingBalance = loanAmount
-        var scheduleArray : [[Float]] = []
-        
-        for m in 1...termMonth {
-            let interest = remainingBalance * r
-            let principal = monthlyPayment - interest
-            totalInterest += interest
-            remainingBalance -= principal
-            scheduleArray += [[interest, principal, remainingBalance]]
-        }
-        
-        return scheduleArray
-    }
-    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToSavedHomes" {
@@ -150,7 +134,6 @@ class MortgageCalculatorViewController: UIViewController {
         }
     }
 }
-    
     extension Float {
         func rounded(toPlaces places: Int) -> Float {
             let divisor = pow(10.0, Float(places))
