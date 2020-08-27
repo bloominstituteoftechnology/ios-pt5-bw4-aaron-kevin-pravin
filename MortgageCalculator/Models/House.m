@@ -21,6 +21,7 @@
     return self;
 }
 
+// MARK: - House snap shot reference
 - (HouseSnapShot *)houseSnapShot
 {
     return [[HouseSnapShot alloc] initWithAddress:self.address
