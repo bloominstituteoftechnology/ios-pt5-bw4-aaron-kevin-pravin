@@ -11,7 +11,6 @@
 		111E9BA124F605BD00784AEF /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E9BA024F605BD00784AEF /* HomeTableViewController.swift */; };
 		11E4C42124ECBC0B005171B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C42024ECBC0B005171B4 /* AppDelegate.swift */; };
 		11E4C42324ECBC0B005171B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C42224ECBC0B005171B4 /* SceneDelegate.swift */; };
-		11E4C42524ECBC0B005171B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4C42424ECBC0B005171B4 /* ViewController.swift */; };
 		11E4C42824ECBC0B005171B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42624ECBC0B005171B4 /* Main.storyboard */; };
 		11E4C42A24ECBC14005171B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42924ECBC14005171B4 /* Assets.xcassets */; };
 		11E4C42D24ECBC14005171B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E4C42B24ECBC14005171B4 /* LaunchScreen.storyboard */; };
@@ -30,7 +29,6 @@
 		11E4C41D24ECBC0B005171B4 /* MortgageCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E4C42024ECBC0B005171B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11E4C42224ECBC0B005171B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		11E4C42424ECBC0B005171B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11E4C42724ECBC0B005171B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11E4C42924ECBC14005171B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11E4C42C24ECBC14005171B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				11E4C42E24ECBC14005171B4 /* Info.plist */,
 				11E4C42024ECBC0B005171B4 /* AppDelegate.swift */,
 				11E4C42224ECBC0B005171B4 /* SceneDelegate.swift */,
-				11E4C42424ECBC0B005171B4 /* ViewController.swift */,
 				11E4C42924ECBC14005171B4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -236,7 +233,6 @@
 				AB21A16824EF668700D23E11 /* Mortgage.m in Sources */,
 				AB21A16924EF668700D23E11 /* DebtIncomeRatio.m in Sources */,
 				11E4C44D24EF6D72005171B4 /* MortgageController.swift in Sources */,
-				11E4C42524ECBC0B005171B4 /* ViewController.swift in Sources */,
 				D74338F824EFF83C00E5D70E /* HomeDetailViewController.swift in Sources */,
 				11E4C42124ECBC0B005171B4 /* AppDelegate.swift in Sources */,
 				AB21A16724EF668700D23E11 /* House.m in Sources */,

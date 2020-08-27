@@ -21,8 +21,6 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        print("\(String(describing: mortgageController?.houseArray.count))")
         return mortgageController?.houseArray.count ?? 0
     }
 

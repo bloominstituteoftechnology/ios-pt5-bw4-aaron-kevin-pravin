@@ -25,6 +25,7 @@
     return self;
 }
 
+// MARK: - House snap shot reference
 - (MortgageSnapShot *)mortgageSnapShot
 {
     return [[MortgageSnapShot alloc] initWithHomePurchasePrice:self.homePurchasePrice.doubleValue
