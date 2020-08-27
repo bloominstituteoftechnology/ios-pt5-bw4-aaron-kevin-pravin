@@ -122,7 +122,6 @@ class MortgageCalculatorViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToSavedHomes" {
             if let tableViewVC = segue.destination as? HomeTableViewController {
