@@ -13,23 +13,17 @@ import MapKit
 extension HomeDetailViewController: CLLocationManagerDelegate {
 
     //Credit: https://stackoverflow.com/questions/42279252/convert-address-to-coordinates-swift
-    func convertAddressToCoordinates(house: House) -> (Double, Double) {
-        let address = house.address
-        var coordinates = (0.0,0.0)
-        let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(address) { (placemarks, error) in
-            guard
-                let placemarks = placemarks,
-                let location = placemarks.first?.location
-            else {
-                print("Invalid Address")
+    func getLocation(from address: House, completion: @escaping (_ location: CLLocation?) -> Void) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address.address) { (placemarks, error) in
+            guard let placemarks = placemarks,
+            let location = placemarks.first?.location else {
+                completion(nil)
                 return
             }
-            coordinates = (location.coordinate.latitude, location.coordinate.longitude)
+            completion(location)
         }
-        return coordinates
     }
-
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
